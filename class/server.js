@@ -17,6 +17,7 @@ class Server {
 
   router() {
     this.app.use("/api/v1/artist", require("../routes/artist.js"));
+    this.app.use("/api/v1/track", require("../routes/track.js"));
   }
 
   listen() {
