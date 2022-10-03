@@ -15,7 +15,9 @@ class Server {
     this.app.use(express.static("public"));
   }
 
-  router() {}
+  router() {
+    this.app.use("/api/v1/artist", require("../routes/artist.js"));
+  }
 
   listen() {
     this.app.listen(this.port, () => {
