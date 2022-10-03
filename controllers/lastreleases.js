@@ -1,7 +1,7 @@
 const { request, response } = require("express");
 const axios = require("axios").default;
 
-async function getArtist(req = request, res = response) {
+async function getLastReleases(req = request, res = response) {
   const id = JSON.stringify(req.params);
   try {
     const response = await axios.get(
@@ -28,7 +28,7 @@ async function getArtist(req = request, res = response) {
         id[26] +
         id[27] +
         id[28]
-      }`,
+      }/albums?include_groups=single&market=ES&limit=5`,
       {
         headers: {
           Accept: "application/json",
@@ -44,5 +44,5 @@ async function getArtist(req = request, res = response) {
 }
 
 module.exports = {
-  getArtist,
+  getLastReleases,
 };

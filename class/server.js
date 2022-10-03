@@ -18,6 +18,13 @@ class Server {
   router() {
     this.app.use("/api/v1/artist", require("../routes/artist.js"));
     this.app.use("/api/v1/track", require("../routes/track.js"));
+    this.app.use(
+      "/api/v1/artist/lastreleases/",
+      require("../routes/lastreleases.js")
+    );
+    this.app.all("*", (req, res) => {
+      res.status(404)("Page not found");
+    });
   }
 
   listen() {
