@@ -2,33 +2,10 @@ const { request, response } = require("express");
 const axios = require("axios").default;
 
 async function getLastReleases(req = request, res = response) {
-  const id = JSON.stringify(req.params);
+  const { id } = req.params;
   try {
     const response = await axios.get(
-      `https://api.spotify.com/v1/artists/${
-        id[7] +
-        id[8] +
-        id[9] +
-        id[10] +
-        id[11] +
-        id[12] +
-        id[13] +
-        id[14] +
-        id[15] +
-        id[16] +
-        id[17] +
-        id[18] +
-        id[19] +
-        id[20] +
-        id[21] +
-        id[22] +
-        id[23] +
-        id[24] +
-        id[25] +
-        id[26] +
-        id[27] +
-        id[28]
-      }/albums?include_groups=single&market=ES&limit=5`,
+      `https://api.spotify.com/v1/artists/${id}/albums?include_groups=single&market=ES&limit=5`,
       {
         headers: {
           Accept: "application/json",
