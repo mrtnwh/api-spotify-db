@@ -10,7 +10,7 @@ async function deleteFollow(req = request, res = response) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.TOKEN_FOLLOW}`,
+          Authorization: `Bearer ${process.env.TOKEN}`,
         },
       }
     );

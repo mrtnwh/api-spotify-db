@@ -10,7 +10,7 @@ async function getLastReleases(req = request, res = response) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.TOKEN1}`,
+          Authorization: `Bearer ${process.env.TOKEN}`,
         },
       }
     );

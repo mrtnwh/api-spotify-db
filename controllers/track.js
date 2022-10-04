@@ -13,12 +13,11 @@ async function getTrack(req = request, res = response) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.TOKEN1}`,
+          Authorization: `Bearer ${process.env.TOKEN}`,
         },
       }
     );
     res.send(JSON.stringify(response.data));
-    //res.status(200).json(response.data);
   } catch (error) {
     console.log(error);
   }
