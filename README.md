@@ -18,8 +18,8 @@ playlist-modify-public y playlist-modify-private
 
 >**GET Artist Last (5) releases /api/v1/artist/lastreleases/{id}**
 
->**POST TRACK /api/v1/create/{id}/{name}/{description}**
+>**POST Create Playlist /api/v1/create/{id}/{name}/{description}**
 
->**PUT Follow (playlist) /api/v1/follow/{id}**
+>**PUT Follow playlist /api/v1/follow/{id}**
 
->**DELETE Follow (playlist) /api/v1/unfollow{id}**
+>**DELETE Follow playlist /api/v1/unfollow{id}**
