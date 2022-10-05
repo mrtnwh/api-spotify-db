@@ -26,7 +26,7 @@ class Server {
     this.app.use("/api/v1/unfollow/", require("../routes/unfollowplaylist.js"));
     this.app.use("/api/v1/create/", require("../routes/createplaylist.js"));
     this.app.all("*", (req, res) => {
-      res.status(404)("Page not found");
+      res.status(404).send("Page not found");
     });
   }
 

@@ -3,6 +3,7 @@ const { postPlaylist } = require("../controllers/createplaylist");
 
 const router = Router();
 
-router.post("/:id/:name", postPlaylist);
+router.get("/:id/:name/:description", postPlaylist);
+router.post("/:id/:name/:description", postPlaylist);
 
 module.exports = router;

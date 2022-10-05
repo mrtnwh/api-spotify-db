@@ -4,12 +4,13 @@ const axios = require("axios");
 async function postPlaylist(req = request, res = response) {
   const { id } = req.params;
   const { name } = req.params;
+  const { description } = req.params;
   try {
     const response = await axios.post(
       `https://api.spotify.com/v1/users/${id}/playlists`,
       {
         name: `${name}`,
-        description: "New playlist description",
+        description: `${description}`,
         public: false,
       },
       {

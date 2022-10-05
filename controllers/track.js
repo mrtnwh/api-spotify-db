@@ -17,7 +17,7 @@ async function getTrack(req = request, res = response) {
         },
       }
     );
-    res.send(JSON.stringify(response.data));
+    res.status(200).json(response.data);
   } catch (error) {
     console.log(error);
   }
