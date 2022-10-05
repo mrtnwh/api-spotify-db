@@ -7,7 +7,8 @@ el archivo .env debe tener los siguiente valores:
 PORT=8080
 TOKEN=VALOR_DEL_TOKEN_SIN_COMILLAS_NI_PUNTO_Y_COMA
 Para que el token sea funcional para todos los endpoints debe tener activado los scopes: 
-playlist-modify-public y playlist-modify-private
+playlist-modify-public y playlist-modify-private.
+En https://developer.spotify.com/console/post-playlists/ en el boton get token y luego tenes que tildar los scopes mencionados.
 ```
 
 **ENDPOINTS**
