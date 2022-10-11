@@ -19,6 +19,7 @@ async function deleteFollow(req = request, res = response) {
       msg: "se ha dejado de seguir a la playlist solicitada",
     });
   } catch (error) {
+    //Estandarizar los formatos de salida/respuesta
     console.log(error);
   }
 }
