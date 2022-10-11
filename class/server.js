@@ -22,10 +22,13 @@ class Server {
       "/api/v1/artist/lastreleases/",
       require("../routes/lastreleases.js")
     );
+    //Se recomienda agrupar funcionalidades en un unico archivo ej : /routes/playlist
     this.app.use("/api/v1/follow/", require("../routes/followplaylist.js"));
     this.app.use("/api/v1/unfollow/", require("../routes/unfollowplaylist.js"));
     this.app.use("/api/v1/create/", require("../routes/createplaylist.js"));
+    
     this.app.all("*", (req, res) => {
+      //Estandarizar los formatos de salida/respuesta
       res.status(404).send("Page not found");
     });
   }

@@ -22,6 +22,7 @@ async function putFollowPlaylist(req = request, res = response) {
       msg: "se ha seguido a la playlist solicitada",
     });
   } catch (error) {
+    //Estandarizar los formatos de salida/respuesta
     console.log(error);
   }
 }

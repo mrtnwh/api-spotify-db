@@ -16,6 +16,7 @@ async function getLastReleases(req = request, res = response) {
     );
     res.status(200).json(response.data);
   } catch (error) {
+    //Estandarizar los formatos de salida/respuesta
     console.log(error);
   }
 }
